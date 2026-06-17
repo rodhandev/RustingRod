@@ -1,3 +1,8 @@
 target/
 *.lock
 .env
+exercises/
+solutions/
+Cargo.toml
+rust-analyzer.toml
+.vscode/
