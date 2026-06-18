@@ -31,3 +31,5 @@ Ver SESSIONS.md para detalle completo de cada sesión.
 - **Shadowing vs mut:** En Rust se puede redeclarar variables con `let` (shadowing) sin necesidad de `mut`
 - **Lifetimes:** Anotaciones explícitas `<'a>` indican que referencias tienen mismo scope
 - **self en métodos:** `new()` no recibe self (función asociada), `get(&self)` para lectura, `incrementar(&mut self)` para modificación
+- **unused_mut warning:** Declarar `mut` cuando el valor nunca cambia genera warning — Rust lo detecta automáticamente
+- **E0425 (variable not found):** Variable declarada dentro de un bloque no es visible fuera de su scope

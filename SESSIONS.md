@@ -40,3 +40,29 @@ Plantilla para cada sesión:
 
 **Estado al terminar:** Listo para rustlings fase 1
 ---
+
+---
+### Sesión 002 — 2026-06-18
+**Tipo:** Práctica — variables y mutabilidad  
+**Archivo trabajado:** tutor/01_variables.rs  
+**Ejercicios:** 4/4 completados
+
+**Conceptos cubiertos:**
+- `let` (variables inmutables por defecto)
+- `let mut` (variables mutables)
+- Shadowing (redeclaración con `let`)
+- Scope de variables (visibilidad en bloques)
+
+**Errores encontrados y cómo los resolví:**
+- E0384 (cannot assign twice to immutable variable): solucionado agregando `mut`
+- E0425 (variable not found): variable declarada dentro de un bloque no visible fuera — moví declaración
+- unused_mut warning: declaré `mut` pero nunca cambié el valor — removí `mut` innecesario
+
+**Aprendizajes clave:**
+- Rust detecta automáticamente `mut` innecesario con warnings
+- Shadowing permite cambiar tipo de una variable, `mut` no
+- Los mensajes del compilador de Rust son muy claros y ayudan a corregir errores
+- Scope de variables es estricto: declarar dentro de `{}` limita visibilidad
+
+**Estado al terminar:** let/mut/shadowing dominados, listo para tipos de datos
+---
