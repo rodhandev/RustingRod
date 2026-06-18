@@ -7,10 +7,27 @@
 - **Ejercicios rustlings completados:** 0 / 94
 - **Ejercicios 100-exercises completados:** 0 / 100
 
+## Diagnóstico inicial — 2026-06-17
+
+- **Ejercicio 1 (variables/mutabilidad):** ✅ Resuelto — descubrió shadowing intuitivamente
+- **Ejercicio 2 (lifetimes/&str):** ✅ Resuelto — lógica correcta con .len(), necesitó pista de sintaxis
+- **Ejercicio 3 (iteradores/Vec):** ✅ Resuelto — escribió versión for loop y versión con iteradores
+- **Ejercicio 4 (enums/Result):** ✅ Resuelto — necesitó explicación de enum, implementó correctamente
+- **Ejercicio 5 (structs/métodos):** ✅ Resuelto — errores típicos de primer contacto (tipo invertido, self en new), corregidos rápido
+
+### Conclusión del diagnóstico
+
+- **Conceptos que ya maneja:** lógica de control, comparaciones, intuición de mutabilidad
+- **Conceptos que necesitan práctica:** sintaxis Rust, tipos, self/&self/&mut self, enums
+- **Fase recomendada:** empezar rustlings desde el ejercicio 1 (variables)
+- **Observación:** resuelve bien cuando tiene la analogía en C como puente
+
 ## Registro de sesiones
 
-(Vacío — se irá completando con cada sesión de estudio)
+Ver SESSIONS.md para detalle completo de cada sesión.
 
 ## Errores frecuentes y aprendizajes
 
-(Vacío — se irá documentando conforme surjan patrones)
+- **Shadowing vs mut:** En Rust se puede redeclarar variables con `let` (shadowing) sin necesidad de `mut`
+- **Lifetimes:** Anotaciones explícitas `<'a>` indican que referencias tienen mismo scope
+- **self en métodos:** `new()` no recibe self (función asociada), `get(&self)` para lectura, `incrementar(&mut self)` para modificación

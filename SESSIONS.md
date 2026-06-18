@@ -15,13 +15,28 @@ Plantilla para cada sesión:
 
 ---
 ### Sesión 001 — 2026-06-17
-**Fase:** 1 - Fundamentos
-**Ejercicios trabajados:** intro1, intro2
-**Conceptos cubiertos:** Sintaxis básica de Rust, macro println!, compilación con rustc
-**Errores encontrados y cómo los resolví:** 
-- Olvidé el `!` en `println!()` — aprendí que `println!` es un macro, no una función
-- Faltaba `;` al final de una expresión — el compilador dio error claro de sintaxis
+**Tipo:** Diagnóstico inicial  
+**Duración:** ~2 horas  
+**Ejercicios trabajados:** diagnostico.rs (5/5 completados)
 
-**Notas / aprendizajes clave:** 
-Rust requiere exactitud sintáctica desde el inicio. El compilador es muy claro con sus mensajes de error.
+**Conceptos cubiertos:**
+- Variables y shadowing vs mutabilidad
+- Lifetimes explícitos en funciones con referencias
+- Iteradores y métodos funcionales (.filter(), .collect())
+- Enums personalizados para manejo de errores
+- Structs con métodos (&self, &mut self)
+
+**Errores encontrados y cómo los resolví:**
+- Ejercicio 2: sintaxis `if s1.len() > s2.len() { s1 } else { s2 }` — necesitaba las llaves
+- Ejercicio 4: confusión inicial sobre cómo definir variantes de enum con datos
+- Ejercicio 5: puse `self` en `new()` (debía ser función asociada sin self), invertí tipo de retorno
+
+**Aprendizajes clave:**
+- Shadowing permite redeclarar variables sin `mut`
+- Lifetimes conectan scope de referencias entre parámetros y retorno
+- Iteradores son más idiomáticos que loops explícitos en Rust
+- Enums pueden llevar datos asociados (Ok(i32), Err(String))
+- Distinción clara entre funciones asociadas (new) y métodos (&self/&mut self)
+
+**Estado al terminar:** Listo para rustlings fase 1
 ---
