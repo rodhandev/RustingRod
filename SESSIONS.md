@@ -66,3 +66,38 @@ Plantilla para cada sesión:
 
 **Estado al terminar:** let/mut/shadowing dominados, listo para tipos de datos
 ---
+
+---
+### Sesión 003 — 2026-06-19
+**Tipo:** Teoría — representación binaria de números  
+**Duración:** ~30 minutos  
+**Ejercicios trabajados:** Conversión manual a IEEE 754 f32
+
+**Conceptos cubiertos:**
+- Binarización de enteros: división por 2, leer restos de abajo a arriba
+- Binarización de fracciones: multiplicar por 2, tomar entero de arriba a abajo
+- Forma normalizada IEEE 754: 1.XXX × 2ⁿ
+- Cálculo de exponente con bias 127: n + 127, convertir a 8 bits
+- Mantisa: bits después del "1." implícito, rellenar con ceros hasta 23 bits
+- Por qué 0.1 decimal no tiene representación exacta en binario (loop infinito)
+
+**Conversiones realizadas:**
+- 5.0 → f32: ✅ correcto al segundo intento
+- 2.0 → f32: ✅ correcto
+- -4.0 → f32: ✅ correcto (signo negativo)
+- 0.5 → f32: ✅ correcto (fracción)
+- 3.5 → f32: ✅ correcto al primer intento
+
+**Errores encontrados y cómo los resolví:**
+- En 0.5: confundí parte entera con mantisa — puse "10000..." en vez de 23 ceros
+- Entendí que la mantisa guarda solo lo que va DESPUÉS del "1." implícito
+
+**Aprendizajes clave:**
+- Enteros se binarizan con divisiones sucesivas por 2
+- Fracciones se binarizan multiplicando por 2 y tomando el entero
+- El "1." de la forma normalizada es implícito y NO se guarda en la mantisa
+- Muchos decimales simples (como 0.1) no tienen representación exacta en binario
+- Esto explica por qué f32/f64 tienen imprecisión en operaciones decimales
+
+**Estado al terminar:** Comprensión sólida de IEEE 754, listo para continuar Fase 1 Rust
+---

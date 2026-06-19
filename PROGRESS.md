@@ -33,3 +33,5 @@ Ver SESSIONS.md para detalle completo de cada sesión.
 - **self en métodos:** `new()` no recibe self (función asociada), `get(&self)` para lectura, `incrementar(&mut self)` para modificación
 - **unused_mut warning:** Declarar `mut` cuando el valor nunca cambia genera warning — Rust lo detecta automáticamente
 - **E0425 (variable not found):** Variable declarada dentro de un bloque no es visible fuera de su scope
+- **Mantisa en IEEE 754:** La mantisa guarda solo lo que va DESPUÉS del "1." implícito — el "1." nunca se almacena
+- **0.1 en binario:** No tiene representación exacta (loop infinito) — por eso floats tienen imprecisión
