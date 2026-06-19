@@ -101,3 +101,34 @@ Plantilla para cada sesión:
 
 **Estado al terminar:** Comprensión sólida de IEEE 754, listo para continuar Fase 1 Rust
 ---
+
+---
+### Sesión 004 — 2026-06-19 (tarde)
+**Tipo:** Práctica — tipos escalares en Rust  
+**Duración:** ~40 minutos  
+**Archivo trabajado:** tutor/02_tipos.rs (completado previamente)
+
+**Conceptos cubiertos:**
+- Tipos enteros: i8/i16/i32/i64, u8/u16/u32/u64
+- Tipos flotantes: f32/f64
+- Tipos primitivos: bool, char
+- Comparación con C: int → i32, unsigned char → u8, double → f64
+- Regla para elegir tipo: signo → i/u, rango → número de bits
+- Casting con `as`: trunca bits menos significativos (≡ módulo 2ⁿ)
+- Alternativas seguras para producción: `u8::try_from()`
+- Mutabilidad vs shadowing: `mut` permite cambio, shadowing crea nueva variable
+
+**Ejercicios resueltos:**
+- Elegir tipos para edad/precio/flag → u8, f64, bool (refinó de i32 a u8)
+- 300u32 as u8 → calculó 44 correctamente (truncamiento de bits)
+- 1000u32 as u8 → calculó 232 correctamente: "solo sobreviven últimos 8 bits"
+- ¿`let mut x` seguido de `let x` es mutable? → no, es nueva variable inmutable
+
+**Aprendizajes clave:**
+- `as` trunca bits — no satura ni hace panic (diferente a otros lenguajes)
+- Shadowing ≠ mutabilidad: misma sintaxis del nombre pero variable nueva
+- El `mut` NO se hereda en shadowing — la nueva variable es inmutable por defecto
+- Casting en Rust es explícito siempre — evita bugs de conversión implícita
+
+**Estado al terminar:** Tipos escalares dominados, listo para control de flujo
+---

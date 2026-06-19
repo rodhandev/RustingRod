@@ -35,3 +35,5 @@ Ver SESSIONS.md para detalle completo de cada sesión.
 - **E0425 (variable not found):** Variable declarada dentro de un bloque no es visible fuera de su scope
 - **Mantisa en IEEE 754:** La mantisa guarda solo lo que va DESPUÉS del "1." implícito — el "1." nunca se almacena
 - **0.1 en binario:** No tiene representación exacta (loop infinito) — por eso floats tienen imprecisión
+- **Casting con `as`:** Trunca bits menos significativos (equivalente a módulo 2ⁿ) — no satura ni hace panic. Para producción usar `try_from()`
+- **Shadowing no hereda `mut`:** `let mut x` seguido de `let x` crea nueva variable inmutable
