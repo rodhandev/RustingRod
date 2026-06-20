@@ -32,7 +32,7 @@
 
 ## Registro de sesiones
 
-Ver SESSIONS.md para detalle completo de cada sesión.
+Ver [SESSIONS.md](SESSIONS.md) para detalle completo de cada sesión.
 
 ## Errores frecuentes y aprendizajes
 

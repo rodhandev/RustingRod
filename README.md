@@ -8,9 +8,9 @@ Dominar Rust desde una base de C/Python para aplicarlo en proyectos reales.
 
 ## Estructura del repo
 
-- `ROADMAP.md` — Plan de aprendizaje progresivo en 6 fases
-- `PROGRESS.md` — Seguimiento de avance semanal y métricas
-- `SESSIONS.md` — Registro de sesiones de estudio
+- [ROADMAP.md](ROADMAP.md) — Plan de aprendizaje progresivo en 6 fases
+- [PROGRESS.md](PROGRESS.md) — Seguimiento de avance semanal y métricas
+- [SESSIONS.md](SESSIONS.md) — Registro de sesiones de estudio
 - Ejercicios locales en `/home/rodri/rustlings/` (no versionados)
 
 ## Cómo usar este repo
@@ -23,3 +23,11 @@ Este repositorio documenta mi proceso de aprendizaje de Rust. Los ejercicios se 
 - Notas de cada sesión de estudio
 
 El código de ejercicios no se versiona — solo la documentación del aprendizaje.
+
+## Documentación
+
+| Archivo | Propósito |
+|---------|-----------|
+| [ROADMAP.md](ROADMAP.md) | Plan de aprendizaje por fases |
+| [PROGRESS.md](PROGRESS.md) | Estado actual y ejercicios completados |
+| [SESSIONS.md](SESSIONS.md) | Registro cronológico de sesiones |
