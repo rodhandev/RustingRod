@@ -132,3 +132,37 @@ Plantilla para cada sesión:
 
 **Estado al terminar:** Tipos escalares dominados, listo para control de flujo
 ---
+
+---
+### Sesión 005 — 2026-06-19 (noche)
+**Tipo:** Práctica — control de flujo en Rust  
+**Duración:** ~35 minutos  
+**Tema:** if como expresión, loop, while, for con rangos
+
+**Conceptos cubiertos:**
+- `if` como expresión que retorna valor (no existe en C)
+- Regla del punto y coma: con `;` descarta valor, sin `;` lo retorna
+- `loop`: equivalente a `while(true)` pero puede retornar valor con `break valor;`
+- `while`: igual que C, no retorna valor
+- `for` con rangos: `0..5` (exclusivo), `0..=5` (inclusivo) — no hay `for(int i=0;i<n;i++)`
+- Range como tipo en sí mismo, no solo sintaxis
+
+**Ejercicios resueltos:**
+- `if x > 5 { x * 2 } else { x / 2 }` con x=10 → respondió 20 ✅
+- Suma 1..=10 con `for` → error de scope (declaró suma dentro del loop), corrigió
+- Suma 1..=10 con `loop` → dos errores: `break` sin valor, rango 0..10 vs 1..=10, corrigió ambos
+
+**Errores encontrados y cómo los resolví:**
+- Declaró acumulador dentro del loop (se reinicia cada iteración) → moví fuera
+- `break` sin valor en loop que debería retornar resultado → cambié a `break suma;`
+- Shadowing accidental: usó `let suma` para resultado cuando ya existía `let mut suma`
+- Confusión de rango: usó `0..10` cuando debía ser `1..=10`
+
+**Aprendizajes clave:**
+- Scope en Rust es estricto: variable dentro del bloque no existe fuera
+- `break suma;` en loop retorna el valor — `break;` retorna `()`
+- `0..=10` incluye el 10, `0..10` excluye el 10
+- `if` sin `;` al final retorna su valor (expression-based language)
+
+**Estado al terminar:** Control de flujo dominado, listo para funciones
+---

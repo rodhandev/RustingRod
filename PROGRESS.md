@@ -37,3 +37,6 @@ Ver SESSIONS.md para detalle completo de cada sesión.
 - **0.1 en binario:** No tiene representación exacta (loop infinito) — por eso floats tienen imprecisión
 - **Casting con `as`:** Trunca bits menos significativos (equivalente a módulo 2ⁿ) — no satura ni hace panic. Para producción usar `try_from()`
 - **Shadowing no hereda `mut`:** `let mut x` seguido de `let x` crea nueva variable inmutable
+- **Acumuladores en loops:** Declarar dentro del loop los reinicia cada iteración — declarar fuera del loop
+- **break sin valor:** `break;` retorna `()`, `break valor;` retorna el valor
+- **Rangos inclusivos vs exclusivos:** `0..5` excluye el 5, `0..=5` incluye el 5
