@@ -7,6 +7,14 @@
 - **Ejercicios rustlings completados:** 0 / 94
 - **Ejercicios 100-exercises completados:** 0 / 100
 
+## Metodología de aprendizaje (Proyecto Arandur)
+
+**Filosofía:** Un concepto está aprendido solo cuando se ejecuta **perfecto Y rápido**, no cuando se toca superficialmente. Tocar un tema una vez no es suficiente — requiere repetición hasta automatización.
+
+**Implicación práctica:** No avanzar ejercicios por avanzar. Cuando aparezcan errores repetidos en un concepto, generar más ejercicios del mismo tipo antes de continuar. El criterio de avance es: ejecución correcta + rápida, no solo "lo intentó".
+
+**Para rustlings:** No saltar al siguiente tema hasta dominar el actual con precisión y velocidad.
+
 ## Diagnóstico inicial — 2026-06-17
 
 - **Ejercicio 1 (variables/mutabilidad):** ✅ Resuelto — descubrió shadowing intuitivamente
@@ -40,3 +48,5 @@ Ver SESSIONS.md para detalle completo de cada sesión.
 - **Acumuladores en loops:** Declarar dentro del loop los reinicia cada iteración — declarar fuera del loop
 - **break sin valor:** `break;` retorna `()`, `break valor;` retorna el valor
 - **Rangos inclusivos vs exclusivos:** `0..5` excluye el 5, `0..=5` incluye el 5
+- **Mezclar input con acumulador:** No usar la variable de entrada como acumulador — se pisan mutuamente
+- **Métodos sobre tipos:** `.to_string()`, `.parse()`, `.len()` — aún necesita consolidar mecánica de métodos

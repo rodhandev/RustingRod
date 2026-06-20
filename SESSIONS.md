@@ -166,3 +166,44 @@ Plantilla para cada sesión:
 
 **Estado al terminar:** Control de flujo dominado, listo para funciones
 ---
+
+---
+### Sesión 006 — 2026-06-19 (noche 2)
+**Tipo:** Práctica — funciones en Rust  
+**Duración:** ~30 minutos  
+**Tema:** Firma de funciones, tipos de retorno, expresiones vs sentencias
+
+**Conceptos cubiertos:**
+- Firma de función: `fn nombre(param: tipo) -> tipo_retorno`
+- Tipos de retorno explícitos con `->`
+- Retorno implícito sin `;` (última expresión)
+- Aplicación de loop con acumuladores
+- Aplicación de for con rangos
+
+**Ejercicios resueltos:**
+- `celsius_a_fahrenheit(f64) -> f64` → correcto al primer intento ✅
+- `factorial(u64) -> u64` con loop → error: usó `n` como input Y acumulador simultáneamente (se pisan), corrigió
+- `factorial` con for → aprendió que `for 1..=n` elimina necesidad de contador manual
+- `fizzbuzz(u32) -> String` → correcto pero con ayuda para `.to_string()`
+
+**Errores encontrados y cómo los resolví:**
+- Mezcló variable de entrada con acumulador en loop (se pisan) → separé en dos variables
+- No tiene clara mecánica de métodos sobre tipos (`.to_string()`) — requiere ayuda externa
+
+**Observación metodológica importante:**
+Rodhan señaló explícitamente: resolver ejercicios superficialmente no es aprendizaje real.
+Su filosofía (proyecto Arandur): un concepto está aprendido solo cuando se ejecuta
+**perfecto Y rápido**. Tocar un tema una vez no es suficiente — requiere repetición hasta
+automatización.
+
+**Implicación para avance en rustlings:**
+No avanzar ejercicios por avanzar. Cuando cometa errores repetidos en un concepto,
+generar más ejercicios del mismo tipo antes de continuar. Criterio: ejecución correcta + rápida.
+
+**Próximos temas a consolidar:**
+- Métodos sobre tipos: `.to_string()`, `.parse()`, `.len()` — qué son, cómo funcionan
+- Más ejercicios de funciones con distintos tipos
+- Ownership en funciones (siguiente tema grande)
+
+**Estado al terminar:** Funciones básicas comprendidas, métodos sobre tipos pendientes
+---
